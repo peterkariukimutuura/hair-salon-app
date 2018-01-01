@@ -1,0 +1,24 @@
+<div class="well" style="width: 500px;">
+	<h2>Add a Client for $stylist.getName()</h2>
+	<form method="post" action="/client" style="font-size: 20px;">
+		<input  style="font-size: 19px" type="hidden" name="stylistId" value="$stylist.getId()" required>
+		<small>Client Name</small>
+		<input style="font-size: 19px"  type="text" name="clientname" class="form-control" placeholder="Client Name" required><br>
+		<small>Client Gender</small>
+		<select name="clientgender" class="form-control" required>
+			<option style="color: #9899ac;" value="">choose one</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="not stated">Prefer not To Say</option>
+		</select>
+		<!-- <input type="text" name="clientgender" class="form-control" placeholder="Gender" required> -->
+		<br>
+		<small>Client Age</small>	
+		<input  style="font-size: 19px" type="number" name="clientAge" class="form-control" placeholder="Age" min="1" required><br>
+		<button class="btn btn-success" type="submit">Add Client</button>
+
+	</form>
+	
+</div><hr>
+<a style="font-size: 17px;" href="/viewallstylists">View all Stylists</a>
+

@@ -1,0 +1,27 @@
+<p class="text-info" style="font-size: 20px;">
+	Displaying currently added Stylists By Salon Owner.
+</p>
+<div class="row" style="width: 500px;">
+	#if($stylists)
+	<ul class="list-group">
+		#foreach($stylist in $stylists)
+	    <li class="list-group-item list-group-item-info" style="min-height: 50px; margin-bottom: 2px;">
+<!-- 	    	<a style="font-size: 20px; color: blue;"
+	    	 href="/stylists/$stylist.getId()">$stylist.getName() 
+	    		<span style="color: #b5adad;text-align: right;float: right;text-decoration: none;"> 
+	    		Click to Add Clients </span></a> -->
+	    		<span class="pull-left" style="color: blue;font-size: 20px;">$stylist.getName()</span>
+	    		<span class="pull-right">
+	    			<a href="/stylists/$stylist.getId()" class="btn btn-primary btn-sm">Add Client</a>
+	    			<a href="#" class="btn btn-success btn-sm">View Clients</a>
+	    		</span>
+		</li>
+	    #end
+	</ul>
+	#else
+	<p class="text-warning" style="font-size: 20px;">
+		There are no Stylists Added in the System
+	</p>
+	#end
+</div><hr>
+<a href="/" style="font-size: 17px;">Go Back</a>
